@@ -29,6 +29,11 @@ public class FXMLController {
     @FXML
     private TextField txtParola;
 
+    
+    /**
+     * Il metodo si occupa di far apparire il risultato del calcolo degli anagrammi
+     * @param event
+     */
     @FXML
     void btnCalcolaAnagrammi(ActionEvent event) {
     	
@@ -62,6 +67,10 @@ public class FXMLController {
     	
     }
 
+    /**
+     * Il metodo si occupa di resettare i campi di testo
+     * @param event
+     */
     @FXML
     void btnReset(ActionEvent event) {
     	
@@ -75,7 +84,8 @@ public class FXMLController {
         assert txtCorretti != null : "fx:id=\"txtCorretti\" was not injected: check your FXML file 'Scene.fxml'.";
         assert txtErrati != null : "fx:id=\"txtErrati\" was not injected: check your FXML file 'Scene.fxml'.";
         assert txtParola != null : "fx:id=\"txtParola\" was not injected: check your FXML file 'Scene.fxml'.";
-
+        txtCorretti.setEditable(false);
+        txtErrati.setEditable(false);
     }
 
     /**
